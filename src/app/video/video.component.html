@@ -1,0 +1,15 @@
+<div class="vin-video">
+  <img [src]="video.snippet.thumbnails.default.url" class="vin-video__thumbnail">
+  <h3>{{ video.snippet.title }}</h3>
+  <div>
+    <div><img class="vin-video__author-thumbnail"></div>
+    <div>
+      <p>{{ video.snippet.channelTitle }}</p>
+      <div>
+        <span>{{ video.statistics.viewCount }}</span>
+        <span>•</span>
+        <span>{{ video.snippet.publishedAt }}</span>
+      </div>
+    </div>
+  </div>
+</div>
