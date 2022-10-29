@@ -1,8 +1,8 @@
 import { of } from 'rxjs';
 import { render, screen } from '@testing-library/angular';
 import { createMock } from '@testing-library/angular/jest-utils';
+import { Video } from '../interfaces/video';
 import { DataService } from './data.service';
-import { Video } from './interfaces/video';
 
 
 
@@ -19,6 +19,21 @@ test('renders the provided videos with createMock', async () => {
         description: "Drugi singiel Jakuba Grabowskiego w SB Starter ⭐ Artysta z Ciechanowa konsekwentnie rozwija swój warsztat, a do współpracy zaprosił gdańskiego ulicznego rapera, Patryka MTS.\n \n“Chrapka (Club Banger)\" otwiera kolejny etap akcji SB Starter. W listopadzie czekają nas premiery kolejnych uczestników akcji.\n\nJakub Grabowski na IG ➡ https://bit.ly/3D84GOB\nSBM Starter na IG ➡ https://bit.ly/3QCnaKZ\nSBM Starter na FB ➡ https://bit.ly/3AIoHd3\n\nReżyser: Filip Skrońc \nOperator: Iwo Rachwał \n1st AD: Jonasz Chlebowski \nŚwiatło: Artur Prymon\nScenariusz: Piotrek Szumowski, Wiolka Walaszczyk, Bartek Strusiński\nProd: Jan Drewicz, Marta Lenartowicz\nKierownik produkcji: Aleksandra Dąbrowska   \nCharakteryzacja: Karolina Han\nKostiumy: Kornelia Fabiańska\nScenografia: Katarzyna Jańczuk\nMontaż: Filip Skrońc // Rafał Felak SHINY HEAD\nAnimacje: Rafał Felak SHINY HEAD\nFotosy: Mikołaj Wawrzak\n\nPodziękowania: Club Bosco Ciechanów, Temptation Tancerze Nitkowskiej, Studio Antyk\n\nTitle: Chrapka (Club Banger)\nArtist: Jakub Grabowski, Patryk MTS\nMusic: Bryan dla NOBOCOTO studio\nMix/mastering: DJ Johny dla NOBOCOTO studio\nISRC: PLS282200165\n©℗ 2022 SBM Label",
         thumbnails: {
           default: {
+            url: "https://i.ytimg.com/vi/2onLeKNEfoA/default.jpg",
+            width: 120,
+            height: 90
+          },
+          standard: {
+            url: "https://i.ytimg.com/vi/2onLeKNEfoA/default.jpg",
+            width: 120,
+            height: 90
+          },
+          high: {
+            url: "https://i.ytimg.com/vi/2onLeKNEfoA/default.jpg",
+            width: 120,
+            height: 90
+          },
+          medium: {
             url: "https://i.ytimg.com/vi/2onLeKNEfoA/default.jpg",
             width: 120,
             height: 90
@@ -69,19 +84,5 @@ test('renders the provided videos with createMock', async () => {
   ];
 
   const dataService = createMock(DataService);
-  dataService.getPopularVideos = jest.fn(() => of(videos));
 
-  // await render(CustomersComponent, {
-  //   componentProviders: [
-  //     {
-  //       provide: CustomersService,
-  //       useValue: customersService,
-  //     },
-  //   ],
-  // });
-
-  // const listItems = screen.getAllByRole('listitem');
-  // expect(listItems).toHaveLength(videos.length);
-
-  // videos.forEach((video) => screen.getByText(new RegExp(video.snippet.title, 'i')));
 });

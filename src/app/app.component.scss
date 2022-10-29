@@ -1,0 +1,25 @@
+.vin-navbar {
+  display: flex;
+  background-color: #0f0f0f;
+  align-items: center;
+  padding: 8px 32px;
+  margin-bottom: 16px;
+  position: sticky;
+  top: 0;
+}
+
+.vin-logo {
+  width: 100px;
+  object-fit: contain;
+}
+
+
+.vin-title {
+  font-size: 2.4rem;
+}
+
+
+.vin-main {
+  max-width: 1544px;
+  margin: auto;
+}

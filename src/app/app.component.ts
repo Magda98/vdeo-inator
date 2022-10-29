@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from './data.service';
 import { Video } from './interfaces/video';
 
 @Component({
@@ -10,19 +9,11 @@ import { Video } from './interfaces/video';
 export class AppComponent implements OnInit {
   title = 'vdeo-inator';
 
-  videosList!: Video[]
+  videoList!: Video[]
 
-  constructor(private dataService: DataService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.dataService.getChannelInfo().subscribe((data) => {
-      console.log(data);
-
-    })
-
-    this.dataService.getPopularVideos().subscribe((data) => {
-      this.videosList = data.items;
-    })
   }
 }

@@ -7,7 +7,7 @@
     <div class="vin-video__info">
       <h3 class="vin-video__title">{{ video.snippet.title }}</h3>
       <p class="vin-video__channel-title">{{ video.snippet.channelTitle }}</p>
-      <div>
+      <div class="vin-video__statistics">
         <span class="vin-video__views">{{ video.statistics.viewCount | numberFormat }} wyświetleń</span>
         <span class="vin-video__separator">•</span>
         <span class="vin-video__date">{{ video.snippet.publishedAt | date : 'd.MM.yyyy' }}</span>

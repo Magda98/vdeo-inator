@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Video } from '../interfaces/video';
+import { Video } from '../../interfaces/video';
 
 @Component({
   selector: 'vin-video',

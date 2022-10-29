@@ -1,8 +1,10 @@
-<nav>
-  <h1>VideoInator</h1>
-</nav>
+<div class="vin-app">
+  <nav class="vin-navbar">
+    <img class="vin-logo" src="assets/logo.png">
+    <h1 class="vin-title">VideoInator</h1>
+  </nav>
 
-
-<vin-video [video]="video" *ngFor="let video of videosList">
-
-</vin-video>
+  <div class="vin-main">
+    <router-outlet></router-outlet>
+  </div>
+</div>
