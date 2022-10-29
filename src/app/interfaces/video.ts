@@ -1,3 +1,6 @@
+type thumbnails = 'default' | 'standard' | 'high' | 'medium'
+
+
 export interface Video {
   kind: string,
   etag: string,
@@ -8,7 +11,7 @@ export interface Video {
     title: string,
     description: string,
     thumbnails: {
-      default: {
+      [key in thumbnails]: {
         url: string,
         width: number,
         height: number,

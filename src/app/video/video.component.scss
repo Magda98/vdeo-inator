@@ -1,0 +1,35 @@
+.vin-video {
+  max-width: 360px;
+
+  .vin-video__thumbnail {
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .vin-video__details {
+    display: flex;
+    margin-top: 8px;
+  }
+
+  .vin-video__author-thumbnail {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%
+  }
+
+  .vin-video__title {
+    font-size: 1.6rem;
+    margin: 0 0 4px 0;
+  }
+
+  .vin-video__info {
+    font-size: 1.4rem;
+    color: #aaa;
+    margin-left: 8px;
+  }
+
+  .vin-video__separator {
+    margin: 0 4px
+  }
+
+}
