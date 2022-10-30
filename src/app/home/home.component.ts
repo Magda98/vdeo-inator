@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { debounceTime, delay, fromEvent, map, switchMap, tap } from 'rxjs';
+import { Channel } from '../interfaces/channel';
 import { Video } from '../interfaces/video';
 import { DataService } from '../services/data.service';
 
@@ -10,6 +11,8 @@ import { DataService } from '../services/data.service';
 })
 export class HomeComponent implements OnInit {
   videoList!: Video[]
+
+  channelList!: Channel[];
 
   onScroll$ = fromEvent(window, "scroll").pipe(debounceTime(200));
 
@@ -30,10 +33,7 @@ export class HomeComponent implements OnInit {
       map((data) => data.map((video) => video.snippet.channelId)),
       switchMap((channelIds) => this.dataService.getChannelInfo(channelIds))
     ).subscribe((channelList) => {
-      this.videoList = this.videoList.map((video) => {
-        const channelInfo = channelList.find((channel) => channel.id === video.snippet.channelId)
-        return { ...video, channelImg: channelInfo?.snippet.thumbnails.high.url };
-      })
+      this.channelList = channelList;
     }
     )
   }

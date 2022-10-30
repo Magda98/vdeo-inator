@@ -1,6 +1,6 @@
 <div class="vin-video-list">
-  <ng-container *ngIf="videoList; else listSkeleton">
-    <vin-video [video]="video" *ngFor="let video of videoList">
+  <ng-container *ngIf="videoList && channelList; else listSkeleton">
+    <vin-video [channelImg]="getChannelImg(video.snippet.channelId)" [video]="video" *ngFor="let video of videoList">
     </vin-video>
   </ng-container>
   <ng-template #listSkeleton>

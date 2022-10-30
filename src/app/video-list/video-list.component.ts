@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Channel } from '../interfaces/channel';
 import { Video } from '../interfaces/video';
 
 @Component({
@@ -7,13 +8,17 @@ import { Video } from '../interfaces/video';
   styleUrls: ['./video-list.component.scss']
 })
 export class VideoListComponent implements OnInit {
+  ngOnInit(): void {
+  }
   @Input()
   videoList!: Video[]
 
+  @Input()
+  channelList!: Channel[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  public getChannelImg(channelId: string) {
+    const channel = this.channelList.find((channel) => channel.id === channelId);
+    return channel?.snippet.thumbnails.high.url;
   }
 
 }
