@@ -3,8 +3,9 @@
   max-width: 360px;
 
   .vin-video__thumbnail {
-    border-radius: 10px;
+    border-radius: 8px;
     object-fit: cover;
+    background-color: hsl(0, 0%, 16%);
   }
 
   .vin-video__details {
@@ -30,6 +31,7 @@
 
   .vin-video__info {
     margin-left: 8px;
+    width: 100%;
   }
 
   .vin-video__statistics {

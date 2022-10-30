@@ -1,12 +1,17 @@
 <div class="vin-video">
-  <img height="200" width="360" [src]="video.snippet.thumbnails.standard.url" class="vin-video__thumbnail">
+
+  <img height="200" width="360" [src]="video.snippet.thumbnails.high.url" class="vin-video__thumbnail">
+
   <div class="vin-video__details">
     <div>
-      <img [src]="video.snippet.thumbnails.standard.url" class="vin-video__author-thumbnail">
+
+      <img [src]="video.channelImg" class="vin-video__author-thumbnail">
     </div>
     <div class="vin-video__info">
+
       <h3 class="vin-video__title">{{ video.snippet.title }}</h3>
       <p class="vin-video__channel-title">{{ video.snippet.channelTitle }}</p>
+
       <div class="vin-video__statistics">
         <span class="vin-video__views">{{ video.statistics.viewCount | numberFormat }} wyświetleń</span>
         <span class="vin-video__separator">•</span>

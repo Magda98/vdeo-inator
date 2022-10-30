@@ -5,6 +5,7 @@ export interface Video {
   kind: string,
   etag: string,
   id: string,
+  channelImg?: string;
   snippet: {
     publishedAt: string,
     channelId: string,
@@ -54,5 +55,6 @@ export interface Video {
 export interface VideosResponse {
   kind: string
   etag: string
+  nextPageToken: string
   items: Video[]
 }

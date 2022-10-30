@@ -2,4 +2,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 32px;
+
+  .vin-video__details {
+    display: flex;
+    margin-top: 8px;
+  }
+
+  .vin-video__info {
+    margin-left: 8px;
+    width: 100%;
+  }
 }

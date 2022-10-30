@@ -10,6 +10,7 @@ export class VideoListComponent implements OnInit {
   @Input()
   videoList!: Video[]
 
+
   constructor() { }
 
   ngOnInit(): void {

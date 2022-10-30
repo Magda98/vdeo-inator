@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { NumberFormatPipe } from './pipes/number-format.pipe';
 import { VideoListComponent } from './video-list/video-list.component';
 import { HomeComponent } from './home/home.component';
+import { SkeletonDirective } from './directives/skeleton.directive';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     VideoComponent,
     NumberFormatPipe,
     VideoListComponent,
-    HomeComponent
+    HomeComponent,
+    SkeletonDirective
   ],
   imports: [
     BrowserModule,
