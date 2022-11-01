@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { VideoDetailsComponent } from './video-details/video-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  // TODO: add video details component
-  // { path: 'video/:id', component: },
+  { path: 'video/:id', component: VideoDetailsComponent },
 ];
 
 @NgModule({

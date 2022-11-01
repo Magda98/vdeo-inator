@@ -5,7 +5,6 @@ export interface Video {
   kind: string,
   etag: string,
   id: string,
-  channelImg?: string;
   snippet: {
     publishedAt: string,
     channelId: string,

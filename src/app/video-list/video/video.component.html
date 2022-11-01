@@ -1,22 +1,20 @@
-<div class="vin-video">
+<a class="vin-video__link" [routerLink]="['/video/'+video.id]">
+  <div class="vin-video">
+    <img height="200" width="360" [src]="video.snippet.thumbnails.high.url" class="vin-video__thumbnail">
+    <div class="vin-video__details">
+      <div>
+        <img [src]="channelImg" class="vin-video__author-thumbnail">
+      </div>
+      <div class="vin-video__info">
 
-  <img height="200" width="360" [src]="video.snippet.thumbnails.high.url" class="vin-video__thumbnail">
+        <h3 class="vin-video__title">{{ video.snippet.title }}</h3>
+        <p class="vin-video__channel-title">{{ video.snippet.channelTitle }}</p>
 
-  <div class="vin-video__details">
-    <div>
-
-      <img [src]="channelImg" class="vin-video__author-thumbnail">
-    </div>
-    <div class="vin-video__info">
-
-      <h3 class="vin-video__title">{{ video.snippet.title }}</h3>
-      <p class="vin-video__channel-title">{{ video.snippet.channelTitle }}</p>
-
-      <div class="vin-video__statistics">
-        <span class="vin-video__views">{{ video.statistics.viewCount | numberFormat }} wyświetleń</span>
-        <span class="vin-video__separator">•</span>
-        <span class="vin-video__date">{{ video.snippet.publishedAt | date : 'd.MM.yyyy' }}</span>
+        <div class="vin-video__statistics">
+          <span class="vin-video__views">{{ video.statistics.viewCount | numberFormat }} wyświetleń</span>
+          <span class="vin-video__separator">•</span>
+          <span class="vin-video__date">{{ video.snippet.publishedAt | date : 'd.MM.yyyy' }}</span>
+        </div>
       </div>
     </div>
   </div>
-</div>

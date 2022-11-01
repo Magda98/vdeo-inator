@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,7 @@ import { NumberFormatPipe } from './pipes/number-format.pipe';
 import { VideoListComponent } from './video-list/video-list.component';
 import { HomeComponent } from './home/home.component';
 import { SkeletonDirective } from './directives/skeleton.directive';
+import { VideoDetailsComponent } from './video-details/video-details.component';
 
 
 @NgModule({
@@ -18,13 +20,15 @@ import { SkeletonDirective } from './directives/skeleton.directive';
     NumberFormatPipe,
     VideoListComponent,
     HomeComponent,
-    SkeletonDirective
+    SkeletonDirective,
+    VideoDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
