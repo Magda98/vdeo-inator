@@ -7,7 +7,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import DOMPurify from 'dompurify';
 
 @Component({
-  selector: 'app-video-details',
+  selector: 'vin-video-details',
   templateUrl: './video-details.component.html',
   styleUrls: ['./video-details.component.scss']
 })
@@ -21,8 +21,8 @@ export class VideoDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.pipe(map((params) => params['id']), switchMap((id: string) => {
       return this.dataService.getVideoDetails(id)
-    })).subscribe((videos) => {
-      this.videoDetails = videos[0];
+    })).subscribe(([video]) => {
+      this.videoDetails = video;
       this.sanitizeHtml(this.videoDetails.player.embedHtml)
     })
   }

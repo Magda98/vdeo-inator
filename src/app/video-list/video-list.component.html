@@ -4,7 +4,7 @@
     </vin-video>
   </ng-container>
   <ng-template #listSkeleton>
-    <div *ngFor="let _ of [].constructor(48)" class="vin-video-skeleton">
+    <div *ngFor="let _ of skeletonArray" class="vin-video-skeleton">
       <div skeleton skeletonWidth="100%" skeletonHeight="200px" skeletonClassName="mb-8 br-8">
       </div>
 

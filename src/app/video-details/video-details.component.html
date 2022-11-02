@@ -1,3 +1,6 @@
 <div class="vin-video-details" *ngIf="videoDetails">
-  <div style="width: 500px; height: 500px;" [innerHtml]="videoIframe"></div>
+  <div class="vin-video-details__iframe" [innerHtml]="videoIframe"></div>
+  <div class="vin-video-details__info">
+    <h1 class="vin-video-details__title">{{videoDetails.snippet.title}}</h1>
+  </div>
 </div>

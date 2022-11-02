@@ -16,6 +16,8 @@ export class VideoListComponent implements OnInit {
   @Input()
   channelList!: Channel[];
 
+  skeletonArray = Array.from({ length: 48 })
+
   public getChannelImg(channelId: string) {
     const channel = this.channelList.find((channel) => channel.id === channelId);
     return channel?.snippet.thumbnails.high.url;
