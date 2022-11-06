@@ -1,12 +1,11 @@
 import { Channel } from './../interfaces/channel';
 import { DataService } from './../services/data.service';
-import { Component, Input, OnInit, Pipe } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { EMPTY, map, switchMap, tap } from 'rxjs';
+import { map, switchMap, tap } from 'rxjs';
 import { Video } from '../interfaces/video';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import DOMPurify from 'dompurify';
-import { Channel } from '../interfaces/channel';
 
 @Component({
   selector: 'vin-video-details',
