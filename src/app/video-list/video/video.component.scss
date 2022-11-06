@@ -1,10 +1,21 @@
 .vin-video {
-  max-width: 360px;
+  max-width: 320px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 360px;
+  }
 
   .vin-video__thumbnail {
     border-radius: 8px;
     object-fit: cover;
     background-color: hsl(0, 0%, 16%);
+    max-width: 320px;
+    max-height: 160px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 360px;
+      max-height: 200px;
+    }
   }
 
   .vin-video__details {
@@ -47,7 +58,8 @@
 
 .vin-video__link {
   text-decoration: none;
-  display: block;
+  display: flex;
+  justify-content: center;
   transition: transform 0.3s;
 
   &:hover {

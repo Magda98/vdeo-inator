@@ -1,16 +1,32 @@
+.vin-app {
+  position: relative;
+}
+
 .vin-navbar {
   display: flex;
+  justify-content: center;
   background-color: #0f0f0f;
   align-items: center;
   padding: 8px 32px;
-  margin-bottom: 16px;
   position: sticky;
   top: 0;
   z-index: 10;
+
+  @media screen and (min-width: 1580px) {
+    padding: 8px;
+  }
+}
+
+.vin-navbar-inner {
+  display: flex;
+  max-width: 1544px;
+  width: 100%;
+  margin: auto;
 }
 
 .vin-logo {
-  width: 100px;
+  width: 50px;
+  margin-right: 16px;
   object-fit: contain;
 }
 
@@ -23,4 +39,13 @@
 .vin-main {
   max-width: 1544px;
   margin: auto;
+  padding: 8px;
+
+  @media screen and (min-width: 768px) {
+    padding: 8px 32px;
+  }
+
+  @media screen and (min-width: 1580px) {
+    padding: 8px;
+  }
 }
