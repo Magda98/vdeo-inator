@@ -1,3 +1,4 @@
+import { Channel } from './../interfaces/channel';
 import { DataService } from './../services/data.service';
 import { Component, Input, OnInit, Pipe } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -17,7 +18,7 @@ export class VideoDetailsComponent implements OnInit {
 
   channelDetails?: Channel
 
-  relatedVideos?: Video[]
+  channelVideos?: Video[]
 
   videoIframe!: SafeHtml;
 
@@ -37,9 +38,9 @@ export class VideoDetailsComponent implements OnInit {
         tap(([channel]) => {
           this.channelDetails = channel;
         }),
-        switchMap((_) => this.dataService.getRelatedVideos(this.videoDetails?.id as string)),
-        tap((relatedVideos) => {
-          this.relatedVideos = relatedVideos
+        switchMap(([channel]) => this.dataService.getChannelVideos(channel.id)),
+        tap((channelVideos) => {
+          this.channelVideos = channelVideos
         })
       ).subscribe()
   }
