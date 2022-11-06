@@ -1,6 +1,24 @@
-<div class="vin-video-details" *ngIf="videoDetails">
-  <div class="vin-video-details__iframe" [innerHtml]="videoIframe"></div>
-  <div class="vin-video-details__info">
-    <h1 class="vin-video-details__title">{{videoDetails.snippet.title}}</h1>
+<div class="vin-video-details" *ngIf="videoDetails && channelDetails">
+  <div class="vin-video-details__main">
+    <div class="vin-video-details__iframe" [innerHtml]="videoIframe"></div>
+    <div class="vin-video-details__info">
+      <h1 class="vin-video-details__title">{{videoDetails.snippet.title}}</h1>
+    </div>
+    <div class="vin-video-details__channel-info">
+      <img [src]="channelDetails.snippet.thumbnails.high.url" class="vin-video__author-thumbnail">
+      <p>
+        {{ channelDetails.snippet.title }}
+      </p>
+    </div>
+    <div class="vin-video-details__video-description">
+      <span class="vin-video__views">{{ videoDetails.statistics.viewCount | numberFormat }} wyświetleń</span>
+      <pre class="vin-video-details__video-description-text">{{ videoDetails.snippet.description }}</pre>
+    </div>
+  </div>
+  <div class="vin-video-details__aside">
+    <div *ngIf="relatedVideos">
+      <vin-video-list [videoList]="relatedVideos">
+      </vin-video-list>
+    </div>
   </div>
 </div>
