@@ -17,6 +17,12 @@
   }
 }
 
+.vin-navbar__link {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+}
+
 .vin-navbar-inner {
   display: flex;
   max-width: 1544px;

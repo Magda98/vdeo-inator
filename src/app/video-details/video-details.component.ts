@@ -37,11 +37,15 @@ export class VideoDetailsComponent implements OnInit {
         tap(([channel]) => {
           this.channelDetails = channel;
         }),
-        switchMap(([channel]) => this.dataService.getChannelVideos(channel.id)),
+        switchMap(([channel]) => this.dataService.getChannelVideos(channel.contentDetails.relatedPlaylists.uploads)),
         tap((channelVideos) => {
           this.channelVideos = channelVideos
         })
       ).subscribe()
+  }
+
+  get channelList() {
+    return Array(6).fill(this.channelDetails)
   }
 
   public sanitizeHtml(value: string) {

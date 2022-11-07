@@ -1,22 +1,24 @@
-<div class="vin-video-list">
+<div class="vin-video-list" [ngClass]="{'vin-video-list--one-column': isOneColumnLayout}">
   <ng-container *ngIf="videoList && channelList; else listSkeleton">
     <vin-video [channelImg]="getChannelImg(video.snippet.channelId)" [video]="video" *ngFor="let video of videoList">
     </vin-video>
   </ng-container>
   <ng-template #listSkeleton>
-    <div *ngFor="let _ of skeletonArray" class="vin-video-skeleton">
-      <div skeleton skeletonWidth="100%" skeletonHeight="200px" skeletonClassName="mb-8 br-8">
-      </div>
+    <ng-container *ngIf="skeletonLength">
+      <div *ngFor="let _ of skeletonArray" class="vin-video-skeleton">
+        <div skeleton skeletonWidth="100%" skeletonHeight="200px" skeletonClassName="mb-8 br-8">
+        </div>
 
-      <div class="vin-video__details">
-        <div>
-          <div skeleton skeletonWidth="36px" skeletonHeight="36px" skeletonClassName="br-50"></div>
-        </div>
-        <div class="vin-video__info">
-          <div skeleton skeletonWidth="80%" skeletonHeight="20px" skeletonClassName="br-2 mb-8"></div>
-          <div skeleton skeletonWidth="60%" skeletonHeight="20px" skeletonClassName="br-2"></div>
+        <div class="vin-video__details">
+          <div>
+            <div skeleton skeletonWidth="36px" skeletonHeight="36px" skeletonClassName="br-50"></div>
+          </div>
+          <div class="vin-video__info">
+            <div skeleton skeletonWidth="80%" skeletonHeight="20px" skeletonClassName="br-2 mb-8"></div>
+            <div skeleton skeletonWidth="60%" skeletonHeight="20px" skeletonClassName="br-2"></div>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
   </ng-template>
 </div>

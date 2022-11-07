@@ -17,6 +17,10 @@ export interface Video {
         height: number,
       }
     },
+    resourceId?: {
+      kind: string,
+      videoId: string,
+    }
     channelTitle: string,
     tags: string[],
     categoryId: string,

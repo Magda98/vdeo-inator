@@ -4,6 +4,12 @@ export interface Channel {
   kind: string;
   etag: string;
   id: string;
+  contentDetails: {
+    relatedPlaylists: {
+      likes: string,
+      uploads: string
+    },
+  }
   snippet: {
     title: string;
     description: string;

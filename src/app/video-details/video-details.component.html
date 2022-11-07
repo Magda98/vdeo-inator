@@ -17,7 +17,8 @@
   </div>
   <div class="vin-video-details__aside">
     <div *ngIf="channelVideos">
-      <vin-video-list [videoList]="channelVideos">
+      <vin-video-list [skeletonLength]="6" [isOneColumnLayout]="true" [channelList]="channelList"
+        [videoList]="channelVideos">
       </vin-video-list>
     </div>
   </div>
