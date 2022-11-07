@@ -6,4 +6,4 @@ App for mostPopular videos from YouTube created in Angular
 
 ![image](https://user-images.githubusercontent.com/33430525/200417112-4cf522e7-962b-4290-af3d-3f1c0ce0d7a6.png)
 
-![chrome_NPUjnEVijt](https://user-images.githubusercontent.com/33430525/200417520-42462a99-fde9-47e2-9742-73fd4d620449.gif)
+![chrome_9qZ6TLOuYd](https://user-images.githubusercontent.com/33430525/200417875-4bf53551-e802-4978-bcae-d2f638d13d78.gif)
