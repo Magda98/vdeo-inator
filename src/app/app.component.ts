@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Video } from './interfaces/video';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,11 @@ export class AppComponent implements OnInit {
 
   videoList!: Video[]
 
-  constructor() {
+  constructor(private authService: AuthService) {
+  }
+
+  logIn() {
+    this.authService.login();
   }
 
   ngOnInit() {
