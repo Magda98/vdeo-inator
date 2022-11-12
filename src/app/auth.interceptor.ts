@@ -3,9 +3,10 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpInterceptor,
+  HttpErrorResponse
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError, EMPTY, Observable, throwError } from 'rxjs';
 import { AuthService } from './services/auth.service';
 
 @Injectable()
@@ -26,7 +27,14 @@ export class AuthInterceptor implements HttpInterceptor {
         });
       }
 
-      return next.handle(modifiedReq);
+      return next.handle(modifiedReq).pipe(catchError((err) => {
+        if (err instanceof HttpErrorResponse) {
+          if (err.status === 401 || err.status === 403) {
+            this.authService.isLoggedIn = false;
+          }
+        }
+        return EMPTY
+      }))
     }
 
     return next.handle(req);

@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   videoList!: Video[]
 
-  constructor(private authService: AuthService) {
+  constructor(public authService: AuthService) {
   }
 
   logIn() {

@@ -1,4 +1,5 @@
-<a class="vin-video__link" [routerLink]="['/video', video.snippet.resourceId?.videoId ??  video.id ]">
+<a class="vin-video__link"
+  [routerLink]="['/video', video.snippet.resourceId?.videoId ? video.snippet.resourceId?.videoId :video.id  ]">
   <div class="vin-video">
     <img height="200" width="360" [src]="video.snippet.thumbnails.high.url" class="vin-video__thumbnail">
     <div class="vin-video__details">

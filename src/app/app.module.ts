@@ -14,6 +14,7 @@ import { VideoDetailsComponent } from './video-details/video-details.component';
 import { LoginComponent } from './login/login.component';
 import { AuthInterceptor } from './auth.interceptor';
 import { AuthService } from './services/auth.service';
+import { CanActivateGuardService } from './auth-guard.service';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { AuthService } from './services/auth.service';
     RouterModule
   ],
   providers: [
+    CanActivateGuardService,
     {
       provide: HTTP_INTERCEPTORS,
       useFactory: (authService: AuthService) => {

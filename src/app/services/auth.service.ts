@@ -16,11 +16,14 @@ const config = {
 export class AuthService {
   token?: string;
 
+  isLoggedIn: boolean = false
+
   constructor(private http: HttpClient, private router: Router, private storage: StorageService) {
     const token = this.storage.getData("access_token");
 
     if (token) {
       this.token = token;
+      this.isLoggedIn = true
     }
   }
 
@@ -39,11 +42,11 @@ export class AuthService {
   getToken() {
     const url = location.hash.slice(1);
     const token = new URLSearchParams(url).get("access_token")
-
     if (token) {
       this.token = token;
       this.storage.setData('access_token', token)
     }
+    this.isLoggedIn = true
     this.router.navigate(['']);
   }
 
