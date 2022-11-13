@@ -11,7 +11,6 @@ export class CanActivateGuardService implements CanActivate {
   }
 
   canActivate(): boolean | UrlTree {
-    console.log(this.authService.isLoggedIn)
     if (!this.authService.isLoggedIn) {
       return false;
     }
