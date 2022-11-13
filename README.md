@@ -1,6 +1,6 @@
 # VdeoInator
 
-https://vdeo-inator.vercel.app/
+https://magda98.github.io/vdeo-inator/
 
 App for viewing most popular videos from YouTube created in Angular
 
