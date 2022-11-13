@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  redirectUri: 'https://vdeo-inator.vercel.app/login/'
+  redirectUri: 'https://magda98.github.io/vdeo-inator/login/'
 };
