@@ -1,6 +1,6 @@
 # VdeoInator
 
-https://magda98.github.io/vdeo-inator/
+https://magda98.github.io/video-inator/
 
 App for viewing most popular videos from YouTube created in Angular
 
