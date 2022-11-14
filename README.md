@@ -1,4 +1,4 @@
-# VdeoInator
+# VideoInator
 
 https://magda98.github.io/video-inator/
 
