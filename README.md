@@ -1,8 +1,13 @@
-# VideoInator
+# Videoinator
 
-https://magda98.github.io/video-inator/
+[Videoinator](https://magda98.github.io/video-inator/)
 
-App for viewing most popular videos from YouTube created in Angular
+Videoinator is a simple web application created in Angular that allows users to browse the most popular videos from YouTube. With Videoinator, you can easily discover and watch trending videos without leaving the application. 
+
+## Features
+- **Trending Videos**: Access a curated list of the most popular videos on YouTube.
+- **User-Friendly Interface**: Easy-to-use and intuitive design for a seamless video browsing experience.
+- **Powered by Angular**: Built with Angular for a robust and responsive web application.
 
 ![image](https://user-images.githubusercontent.com/33430525/200418081-2413b31a-0d94-4b7d-992e-8f794af5f780.png)
 
