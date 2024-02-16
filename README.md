@@ -9,6 +9,11 @@ Videoinator is a simple web application created in Angular that allows users to 
 - **User-Friendly Interface**: Easy-to-use and intuitive design for a seamless video browsing experience.
 - **Powered by Angular**: Built with Angular for a robust and responsive web application.
 
+## Technologies
+- [**Angualr**](https://angular.dev/) -  app is built using the Angular framework in version 14
+- [**Testing library**](https://testing-library.com/docs/angular-testing-library/intro/) - unit test are written in TestingLibrary for angualr and run with [Jest](https://jestjs.io/)
+
+
 ![image](https://user-images.githubusercontent.com/33430525/200418081-2413b31a-0d94-4b7d-992e-8f794af5f780.png)
 
 ![image](https://user-images.githubusercontent.com/33430525/200418162-a9fffe62-5ba5-4298-b895-57af4c3d0fd4.png)
